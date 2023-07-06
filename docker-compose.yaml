@@ -1,0 +1,11 @@
+version: "3.8"
+services: 
+  api:
+    build: ./api #Docker File for the build of images for api is on the folder api
+    container_name: api_container
+    ports: 
+      - '4000:4000'
+    volumes:
+      - ./api:/app #Map the api folder with the app folder of the container
+      - /app/node_modules 
+
