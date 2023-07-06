@@ -8,4 +8,11 @@ services:
     volumes:
       - ./api:/app #Map the api folder with the app folder of the container
       - /app/node_modules 
+  myblog:
+    build: ./myblog
+    container_name: myblog_container
+    ports: 
+      - '3000:3000'
+    stdin_open: true
+    tty: true
 
